@@ -131,6 +131,10 @@ async function main() {
             console.log(`正在获取 ${link.year}年 数据...`);
             const html = await httpFetch(link.url);
             const holidays = parseHolidayPage(html, link.year);
+            if (holidays.length === 0) {
+                console.log(`${link.year}年 假期数据解析为空，可能是页面格式发生变化`);
+                process.exit(1);
+            }
             yearsData[String(link.year)] = holidays;
             console.log(`  -> ${holidays.length} 条记录`);
         }

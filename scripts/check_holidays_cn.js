@@ -167,6 +167,10 @@ async function main() {
         console.log(item.title, item.url);
         const [year, yearlyData] = await parsePolicyPage(item.url);
         if (year && yearlyData) {
+            if (yearlyData.length === 0) {
+                console.log(`政策页面解析数据为空: ${item.title}，可能是页面格式发生变化`);
+                process.exit(1);
+            }
             yearsData[year] = yearlyData;
         }
     }

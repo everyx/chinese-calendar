@@ -224,6 +224,10 @@ async function main() {
                     csvContent = fs.readFileSync(csvPath, 'utf-8');
                 }
                 const holidays = parseCSV(csvContent);
+                if (holidays.length === 0) {
+                    console.log(`CSV数据解析为空: ${link.title}，可能是数据源格式发生变化`);
+                    process.exit(1);
+                }
                 yearsData[westernYear] = holidays;
 
                 console.log(`  -> 西元 ${westernYear} 年，${holidays.length} 条数据`);

@@ -92,5 +92,6 @@ export function getCurrentYear() {
 export function hasNextYearData(data) {
     if (!data || !data.Years) return false;
     const nextYear = String(getCurrentYear() + 1);
-    return data.Years[nextYear] !== undefined;
+    const yearData = data.Years[nextYear];
+    return yearData !== undefined && Array.isArray(yearData) && yearData.length > 0;
 }
