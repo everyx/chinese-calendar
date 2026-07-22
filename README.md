@@ -4,7 +4,7 @@
 
 Display Chinese lunar calendar, solar terms, traditional festivals, and statutory holidays in the GNOME clock panel and calendar popup.
 
-<img width="800" alt="calendar" src="https://github.com/user-attachments/assets/df39964c-eb61-4393-ada9-1d8fc080e89b" />
+<img width="600" alt="calendar" src="https://github.com/tigertall/chinese-calendar/blob/master/screenshots/calendar.png"/>
 
 ## 功能特性
 
@@ -20,7 +20,7 @@ Display Chinese lunar calendar, solar terms, traditional festivals, and statutor
 
 ### GNOME Extensions 网站
 
-[<img alt="" height="80" src="https://raw.githubusercontent.com/andyholmes/gnome-shell-extensions-badge/master/get-it-on-ego.svg?sanitize=true">](https://extensions.gnome.org/extension/9586/chinese-calendar/)
+[<img alt="" height="80" src="https://raw.githubusercontent.com/andyholmes/gnome-shell-extensions-badge/master/get-it-on-ego.svg?sanitize=true" />](https://extensions.gnome.org/extension/9586/chinese-calendar/)
 
 ### 手动安装
 
@@ -34,7 +34,7 @@ Display Chinese lunar calendar, solar terms, traditional festivals, and statutor
 
 ## 设置选项
 
-<img width="400" alt="settings" src="https://github.com/user-attachments/assets/88f252f6-6057-4564-9358-cba6ad4d2a8e" />
+<img width="400" alt="preferences" src="https://github.com/tigertall/chinese-calendar/blob/master/screenshots/preferences.png" />
 
 ### 时钟面板
 
