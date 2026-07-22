@@ -1,0 +1,37 @@
+name: Extension Release
+
+on:
+  push:
+    tags:
+      - 'v*' # 仅在推送以 v 开头的标签时触发
+
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6
+        
+      - name: Install msgfmt
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gettext
+          
+      - name: Build GNOME Shell Extension zip
+        run: |
+          bash build_extension.sh
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          # 不指定 name，默认就会使用触发的 tag 名称（如 v1.0.0）作为标题
+          files: |
+            chinese-calendar@tigertall.zip
+          generate_release_notes: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

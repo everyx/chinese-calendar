@@ -3,7 +3,7 @@ name: Deploy holidays.json
 
 on:
   schedule:
-    - cron: '30 0 * 6-12 *'
+    - cron: '30 0 1,15 6-12 *'
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -74,8 +74,9 @@ jobs:
           else
             MONTH=$(date -u +%-m)
             case "$MONTH" in
-              6|7|8|9) TARGET="tw" ;;
-              10|11|12) TARGET="all" ;;
+              6) TARGET="hk" ;;
+              7) TARGET="tw" ;;
+              8|9|10|11|12) TARGET="all" ;;
               *) TARGET="" ;;
             esac
           fi

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-rm -f chinese-calendar.zip
+rm -f chinese-calendar@tigertall.zip
 
 # 编译翻译文件到 locale 目录（支持 zh_CN、zh_HK、zh_TW）
 mkdir -p locale/zh_CN/LC_MESSAGES
@@ -23,7 +23,7 @@ else
 fi
 
 # 打包扩展（不包含 po/ 源文件，只包含编译后的 locale/）
-zip -r chinese-calendar.zip chineseCalendar.js extension.js holidayManager.js \
+zip -r chinese-calendar@tigertall.zip chineseCalendar.js extension.js holidayManager.js \
  locale.js LICENSE metadata.json prefs.js stylesheet.css schemas/ locale/
 
-echo "Extension package 'chinese-calendar.zip' has been created."
+echo "Extension package 'chinese-calendar@tigertall.zip' has been created."
