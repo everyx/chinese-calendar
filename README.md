@@ -18,13 +18,13 @@ Display Chinese lunar calendar, solar terms, traditional festivals, and statutor
 
 ## 安装方法
 
-### GNOME Extensions 网站
+### 1、GNOME Extensions 网站
 
 [<img alt="" height="80" src="https://raw.githubusercontent.com/andyholmes/gnome-shell-extensions-badge/master/get-it-on-ego.svg?sanitize=true" />](https://extensions.gnome.org/extension/9586/chinese-calendar/)
 
-### 手动安装
+### 2、手动安装
 
-1. 下载扩展文件压缩包
+1. 下载github release 的扩展文件压缩包
 2. `gnome-extensions install --force chinese-calendar.zip`
 3. 退出当前的 GNOME 会话，重新登录，这样才能在 GNOME 扩展管理中显示
 4. 在 GNOME 扩展管理中启用和设置扩展
