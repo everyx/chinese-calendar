@@ -115,7 +115,7 @@ export default class ChineseCalendarExtension extends Extension {
 
         // === 4. 监听设置变更 ===
         this._settingsChangedId = this._settings.connect('changed', (settings, key) => {
-            //log('Settings changed:', key);
+            //console.debug('Settings changed:', key);
             this._onSettingsChanged(dm, cal, ml);
         });
 
